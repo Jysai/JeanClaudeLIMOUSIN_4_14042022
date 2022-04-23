@@ -27,11 +27,23 @@ p {
 }
 
 .formData > .green{
-  border: 2px solid limegreen
+  border: 2px solid limegreen;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 48px;
 }
 
 .formData > .red{
-  border: 2px solid orangered
+  border: 2px solid orangered;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 20px;
+  height: 48px;
 }
 
 
