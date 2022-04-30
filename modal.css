@@ -24,6 +24,12 @@ body {
 p {
   margin-bottom: 0;
   padding: 0.5vw;
+
+  
+}
+
+.bground-sucess{
+  display: none;
 }
 
 .formData > .green{
@@ -178,7 +184,7 @@ main {
   font-size: 16px;
 }
 
-.bground {
+.bground, .bground-sucess {
   display: none;
   position: fixed;
   z-index: 1;
@@ -204,7 +210,7 @@ main {
   padding-top: 10px;
 }
 
-.modal-body {
+.modal-body, .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
 }
@@ -342,6 +348,34 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
+.close-sucess {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.close-sucess:before,
+.close-sucess:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.close-sucess:before {
+  transform: rotate(45deg);
+}
+.close-sucess:after {
+  transform: rotate(-45deg);
+}
+
+
+
 .btn-submit,
 .btn-signup {
   background: #fe142f;
