@@ -376,6 +376,7 @@ input[data-error]::after {
 
 
 
+
 .btn-submit,
 .btn-signup {
   background: #fe142f;
@@ -401,6 +402,12 @@ input[data-error]::after {
 }
 .select-selected {
   background-color: #fff;
+}
+
+#cguErrorMsg, #tournamentNumberErrorMsg, #tournamentTownErrorMsg,#birthdateErrorMsg, #emailErrorMsg, #lastNameErrorMsg, #firstNameErrorMsg {
+  color: red;
+  font-size: small;
+  font-weight: 100;
 }
 
 /* Style the arrow inside the select element: */
