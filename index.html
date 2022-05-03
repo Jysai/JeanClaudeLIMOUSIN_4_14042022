@@ -32,8 +32,7 @@
     <div class="hero-section">
       <div class="hero-content">
         <h1 class="hero-headline">
-          Marathon national<br>
-          de jeux vidéos
+          Marathon national de jeux vidéos
         </h1>
         <p class="hero-text">
           Vous aimez jouer ? Notre prochain évènement gaming est ouvert
@@ -55,7 +54,7 @@
       <div class="content">
         <span class="close"></span>
         <div class="modal-body">
-          <form name="reserve" class="reserve" action="index.html" method="get" onsubmit="return validate();">
+          <form name="reserve" class="reserve" action="index.html" method="get" onsubmit="validate();">
             <div class="formData">
               <label for="firstName">Prénom</label><br>
               <input class="text-control" type="text" minlength="2" name="firstName" id="firstName" />
@@ -144,10 +143,11 @@
 
     <div class="bground-sucess">
       <div class="content">
-        <span class="close-sucess"></span>
+        <span class="cross-close-sucess"></span>
         <div class="modal-body">
-          <span>C'est ok</span>
+          <span class="text-sucess">Merci pour votre inscription</span>
         </div>
+        <input class="btn-close-sucess" type="submit" class="button" id="btn-close-sucess" value="Fermer" />
       </div>
     </div>
    

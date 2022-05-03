@@ -28,29 +28,10 @@ p {
   
 }
 
-.bground-sucess{
-  display: none;
-}
 
-.formData > .green{
-  border: 2px solid limegreen;
-  margin: 0;
-  padding: 8px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 20px;
-  height: 48px;
-}
 
-.formData > .red{
-  border: 2px solid orangered;
-  margin: 0;
-  padding: 8px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 20px;
-  height: 48px;
-}
+
+
 
 
 img {
@@ -198,7 +179,7 @@ main {
 
 .content {
   margin: 5% auto;
-  width: 100%;
+  width: 90%;
   max-width: 500px;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
@@ -208,6 +189,21 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-sucess{
+  display: flex;
+    text-align: center;
+}
+
+.btn-close-sucess{
+  position: absolute;
+  bottom: 25px;
+  width: 32px;
 }
 
 .modal-body, .modal-body {
@@ -348,7 +344,7 @@ input[data-error]::after {
 .close:after {
   transform: rotate(-45deg);
 }
-.close-sucess {
+.cross-close-sucess {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -358,8 +354,8 @@ input[data-error]::after {
   cursor: pointer;
   transform: scale(0.7);
 }
-.close-sucess:before,
-.close-sucess:after {
+.cross-close-sucess:before,
+.cross-close-sucess:after {
   position: absolute;
   left: 15px;
   content: " ";
@@ -367,10 +363,10 @@ input[data-error]::after {
   width: 3px;
   background-color: #fff;
 }
-.close-sucess:before {
+.cross-close-sucess:before {
   transform: rotate(45deg);
 }
-.close-sucess:after {
+.cross-close-sucess:after {
   transform: rotate(-45deg);
 }
 
@@ -378,7 +374,9 @@ input[data-error]::after {
 
 
 .btn-submit,
+.btn-close-sucess,
 .btn-signup {
+
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -388,6 +386,8 @@ input[data-error]::after {
   color: #fff;
   cursor: pointer;
   border: 0;
+  display: flex;
+    justify-content: center;
 }
 /* custom select styles */
 .custom-select {
@@ -500,7 +500,7 @@ input[data-error]::after {
 .hero-headline {
   font-size: 6rem;
   font-weight: normal;
-  white-space: nowrap;
+  white-space: normal;;
 }
 .hero-text {
   width: 146%;

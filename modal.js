@@ -12,7 +12,8 @@ const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.querySelectorAll(".close");
-const closeBtnSucess = document.querySelectorAll(".close-sucess");
+const crossCloseSucess = document.querySelectorAll(".cross-close-sucess");
+const btnClossSucess = document.querySelectorAll(".btn-close-sucess");
 const formReset = document.querySelector(".reserve");
 
 const BtnSubmit = document.getElementById("btn-submit");
@@ -25,6 +26,8 @@ const birthdate = document.querySelector("#birthdate");
 const tournament = document.querySelector("#tournament");
 const checkBoxCgu = document.querySelector("#checkbox1");
 const tournamentTown = document.getElementsByName("location");
+
+
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -43,9 +46,13 @@ function closeModal() {
 }
 
 // close modal event
-closeBtnSucess.forEach((btn) =>
+crossCloseSucess.forEach((btn) =>
   btn.addEventListener("click", closeModalSucess)
 );
+
+btnClossSucess.forEach((btn) =>
+  btn.addEventListener("click", closeModalSucess)
+)
 
 // close modal
 function closeModalSucess() {
@@ -63,18 +70,23 @@ function validateFirstName() {
   if (!firstName.value) {
     firstNameError.innerHTML = "Votre prénom est requis";
     firstNameError.style.display = "block";
+    firstName.style.border = "1px solid red";
     return false;
   } else if (firstName.value.trim().length < 2) {
     firstNameError.innerHTML = "Veuillez renseigner 2 caractères au minimumn";
     firstNameError.style.display = "block";
+    firstName.style.border = "1px solid red";
     return false;
   } else if (!regName.test(firstName.value)) {
     firstNameError.innerHTML =
       "Le champs ne doit pas comporter de chiffres ni de caractères spéciaux";
     firstNameError.style.display = "block";
+    firstName.style.border = "1px solid red";
     return false;
   } else {
+
     firstNameError.style.display = "none";
+    firstName.style.border = "1px solid green";
     return true;
   }
 }
@@ -84,18 +96,22 @@ function validateLastName() {
   if (!lastName.value) {
     lastNameError.innerHTML = "Votre nom est requis";
     lastNameError.style.display = "block";
+    lastName.style.border = "1px solid red";
     return false;
   } else if (lastName.value.trim().length < 2) {
     lastNameError.innerHTML = "Veuillez renseigner 2 caractères au minimumn";
     lastNameError.style.display = "block";
+    lastName.style.border = "1px solid red";
     return false;
   } else if (!regName.test(lastName.value)) {
     lastNameError.innerHTML =
       "Le champs ne doit pas comporter de chiffres ni de caractères spéciaux";
     lastNameError.style.display = "block";
+    lastName.style.border = "1px solid red";
     return false;
   } else {
     lastNameError.style.display = "none";
+    lastName.style.border = "1px solid green";
     return true;
   }
 }
@@ -105,17 +121,21 @@ function validateEmail() {
   if (!email.value) {
     emailErrorMsg.innerHTML = "Votre email est requis";
     emailErrorMsg.style.display = "block";
+    email.style.border = "1px solid red";
     return false;
   } else if (email.value.trim().length < 2) {
     emailErrorMsg.innerHTML = "Veuillez renseigner 2 caractères au minimumn";
     emailErrorMsg.style.display = "block";
+    email.style.border = "1px solid red";
     return false;
   } else if (!regEmail.test(email.value)) {
     emailErrorMsg.innerHTML = "Format de l'email non autorisé";
     emailErrorMsg.style.display = "block";
+    email.style.border = "1px solid red";
     return false;
   } else {
     emailErrorMsg.style.display = "none";
+    email.style.border = "1px solid green";
     return true;
   }
 }
@@ -126,13 +146,16 @@ function validateBirthday() {
     birthdateErrorMsg.innerHTML =
       "Veuillez renseigner votre date d'anniversaire";
     birthdateErrorMsg.style.display = "block";
+    birthdate.style.border = "1px solid red";
     return false;
   } else if (birthdate.value.trim().length >= 11) {
     birthdateErrorMsg.innerHTML = "Format de la date de naissance non autorisé";
     birthdateErrorMsg.style.display = "block";
+    birthdate.style.border = "1px solid red";
     return false;
   } else {
     birthdateErrorMsg.style.display = "none";
+    birthdate.style.border = "1px solid green";
     return true;
   }
 }
@@ -144,13 +167,16 @@ function validateNumberTournament() {
     tournamentNumberErrorMsg.innerHTML =
       "Si vous avez participé à aucun tournoi, veuillez saisir 0";
     tournamentNumberErrorMsg.style.display = "block";
+    tournament.style.border = "1px solid red";
     return false;
   } else if (!regTournament.test(tournament.value)) {
     tournamentNumberErrorMsg.innerHTML = "Veuillez saisir un nombre";
     tournamentNumberErrorMsg.style.display = "block";
+    tournament.style.border = "1px solid red";
     return false;
   } else {
     tournamentNumberErrorMsg.style.display = "none";
+    tournament.style.border = "1px solid green";
     return true;
   }
 }
@@ -212,5 +238,10 @@ BtnSubmit.addEventListener("click", function (ev) {
     modalbg.style.display = "none";
     modalSucess.style.display = "block";
     formReset.reset();
+    firstName.removeAttribute('style')
+    lastName.removeAttribute('style')
+    email.removeAttribute('style')
+    birthdate.removeAttribute('style')
+    tournament.removeAttribute('style')
   }
 });
