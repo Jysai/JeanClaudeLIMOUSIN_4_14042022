@@ -8,15 +8,15 @@ function editNav() {
 }
 
 // DOM Elements
-const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
+
 const closeBtn = document.querySelectorAll(".close");
+const modalbg = document.querySelector(".bground");
+
+const formData = document.querySelectorAll(".formData");
 const crossCloseSucess = document.querySelectorAll(".cross-close-sucess");
 const btnClossSucess = document.querySelectorAll(".btn-close-sucess");
-const formReset = document.querySelector(".reserve");
 
-const BtnSubmit = document.getElementById("btn-submit");
 const modalSucess = document.querySelector(".bground-sucess");
 
 const firstName = document.querySelector("#firstName");
@@ -27,25 +27,25 @@ const tournament = document.querySelector("#tournament");
 const checkBoxCgu = document.querySelector("#checkbox1");
 const tournamentTown = document.getElementsByName("location");
 
+const BtnSubmit = document.getElementById("btn-submit");
+
+const formReset = document.querySelector(".reserve");
 
 
-// launch modal event
+// launch modal 
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// launch modal form
 function launchModal() {
   modalbg.style.display = "block";
 }
 
-// close modal event
+// close modal
 closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
-// close modal
 function closeModal() {
   modalbg.style.display = "none";
 }
 
-// close modal event
 crossCloseSucess.forEach((btn) =>
   btn.addEventListener("click", closeModalSucess)
 );
@@ -54,7 +54,6 @@ btnClossSucess.forEach((btn) =>
   btn.addEventListener("click", closeModalSucess)
 )
 
-// close modal
 function closeModalSucess() {
   modalSucess.style.display = "none";
 }
@@ -65,6 +64,8 @@ const regName =
 const regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const regTournament = /^\d+$/;
 
+
+// Fonction avec plusieurs conditions qui permet de vérifier si le champ prénom est rempli correctement
 function validateFirstName() {
   const firstNameError = document.getElementById("firstNameErrorMsg");
   if (!firstName.value) {
@@ -84,13 +85,13 @@ function validateFirstName() {
     firstName.style.border = "1px solid red";
     return false;
   } else {
-
     firstNameError.style.display = "none";
     firstName.style.border = "1px solid green";
     return true;
   }
 }
 
+// Fonction avec plusieurs conditions qui permet de vérifier si le champ nom est rempli correctement
 function validateLastName() {
   const lastNameError = document.getElementById("lastNameErrorMsg");
   if (!lastName.value) {
@@ -116,6 +117,7 @@ function validateLastName() {
   }
 }
 
+// Fonction avec plusieurs conditions qui permet de vérifier si le champ Email est rempli correctement
 function validateEmail() {
   const emailErrorMsg = document.getElementById("emailErrorMsg");
   if (!email.value) {
@@ -140,6 +142,7 @@ function validateEmail() {
   }
 }
 
+// Fonction avec plusieurs conditions qui permet de vérifier si le champ Date de naissance est rempli correctement
 function validateBirthday() {
   const birthdateErrorMsg = document.getElementById("birthdateErrorMsg");
   if (!birthdate.value) {
@@ -160,6 +163,7 @@ function validateBirthday() {
   }
 }
 
+// Fonction avec plusieurs conditions qui permet de vérifier si le champ Nombre de tournoi est rempli correctement
 function validateNumberTournament() {
   const tournamentNumberErrorMsg =
     document.getElementById("tournamentNumberErrorMsg");
@@ -181,8 +185,7 @@ function validateNumberTournament() {
   }
 }
 
-
-
+// Fonction avec une condition qui permet de savoir si la case ville du tournoi est cochée.
 function validateTownTournament() {
   const tournamentTownErrorMsg = document.getElementById(
     "tournamentTownErrorMsg"
@@ -201,8 +204,7 @@ function validateTownTournament() {
   }
 }
 
-
-
+// Fonction avec une condition qui permet de savoir si la case CGU est cochée.
 function validateCheckCGU() {
   const cguErrorMsg = document.getElementById("cguErrorMsg");
   if (!checkBoxCgu.checked) {
@@ -215,6 +217,7 @@ function validateCheckCGU() {
   }
 }
 
+// Fonction qui permet de vérifier si le formulaire est rempli correctement en cliquant sur le bouton "c'est parti"
 BtnSubmit.addEventListener("click", function (ev) {
   ev.preventDefault();
 

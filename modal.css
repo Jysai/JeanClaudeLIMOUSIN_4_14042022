@@ -24,15 +24,7 @@ body {
 p {
   margin-bottom: 0;
   padding: 0.5vw;
-
-  
 }
-
-
-
-
-
-
 
 img {
   padding-right: 1rem;
@@ -44,10 +36,10 @@ img {
   margin: 3.5%;
 }
 .header-logo {
-    float: left;
+  float: left;
 }
 .main-navbar {
-    float: right;
+  float: right;
 }
 .topnav a {
   float: left;
@@ -78,25 +70,27 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
     color: red;
   }
   .topnav a.icon:hover {
-
     color: white;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
-    
   }
   .topnav.responsive a {
     float: none;
@@ -105,16 +99,15 @@ img {
   }
 }
 
-
-
- @media screen and (max-width: 540px) {
-  .topnav a {display: none;}
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
-    
   }
-} 
+}
 
 main {
   font-size: 130%;
@@ -126,8 +119,6 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
-
-
 }
 
 .modal-btn {
@@ -172,7 +163,8 @@ main {
   font-size: 16px;
 }
 
-.bground, .bground-sucess {
+.bground,
+.bground-sucess {
   display: none;
   position: fixed;
   z-index: 1;
@@ -202,18 +194,19 @@ main {
   align-items: center;
 }
 
-.text-sucess{
+.text-sucess {
   display: flex;
-    text-align: center;
+  text-align: center;
 }
 
-.btn-close-sucess{
+.btn-close-sucess {
   position: absolute;
   bottom: 25px;
   width: 32px;
 }
 
-.modal-body, .modal-body {
+.modal-body,
+.modal-body {
   padding: 15px 8%;
   margin: 15px auto;
 }
@@ -377,13 +370,9 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 
-
-
-
 .btn-submit,
 .btn-close-sucess,
 .btn-signup {
-
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -394,7 +383,7 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
   display: flex;
-    justify-content: center;
+  justify-content: center;
 }
 /* custom select styles */
 .custom-select {
@@ -411,7 +400,13 @@ input[data-error]::after {
   background-color: #fff;
 }
 
-#cguErrorMsg, #tournamentNumberErrorMsg, #tournamentTownErrorMsg,#birthdateErrorMsg, #emailErrorMsg, #lastNameErrorMsg, #firstNameErrorMsg {
+#cguErrorMsg,
+#tournamentNumberErrorMsg,
+#tournamentTownErrorMsg,
+#birthdateErrorMsg,
+#emailErrorMsg,
+#lastNameErrorMsg,
+#firstNameErrorMsg {
   color: red;
   font-size: small;
   font-weight: 100;
@@ -474,7 +469,6 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
- 
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -489,7 +483,6 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
- 
 }
 .hero-content::after {
   content: "";
@@ -507,7 +500,7 @@ input[data-error]::after {
 .hero-headline {
   font-size: 6rem;
   font-weight: normal;
-  white-space: normal;;
+  white-space: normal;
   width: 800px;
 }
 .hero-text {
@@ -554,9 +547,7 @@ footer {
     width: 450px;
     font-weight: bold;
   }
-    
 }
-
 
 @media screen and (max-width: 800px) {
   .hero-section {
@@ -567,7 +558,6 @@ footer {
     background: #fff;
     color: #000;
     padding: 0px;
-   
   }
   .hero-content::after {
     content: unset;
@@ -577,21 +567,18 @@ footer {
   }
   .hero-headline {
     font-size: 2.5rem;
-    
-    width: 100%
-    
+
+    width: 100%;
   }
   .hero-text {
     width: unset;
     margin-top: 19px;
-
   }
-  .header-logo{
+  .header-logo {
     margin-left: 14px;
     margin-top: 17px;
-   
   }
-  .img-logo{
+  .img-logo {
     width: 150px;
   }
   .hero-img img {
@@ -609,19 +596,11 @@ footer {
   }
 }
 
-
 @media screen and (max-width: 600px) {
   .hero-text {
     font-size: 16px;
-   
-    
   }
-    
 }
-
-
-
-
 
 @keyframes modalopen {
   from {
@@ -632,4 +611,3 @@ footer {
     opacity: 1;
   }
 }
-
