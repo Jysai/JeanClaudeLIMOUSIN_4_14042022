@@ -400,6 +400,10 @@ input[data-error]::after {
   background-color: #fff;
 }
 
+#cguErrorMsg{
+  display: none;
+}
+
 #cguErrorMsg,
 #tournamentNumberErrorMsg,
 #tournamentTownErrorMsg,
@@ -483,6 +487,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
+  width: 100%;
 }
 .hero-content::after {
   content: "";
@@ -519,6 +524,7 @@ input[data-error]::after {
 }
 .hero-img {
   grid-column: span 8;
+  width: 100%;
 }
 .hero-img img {
   width: 100%;
